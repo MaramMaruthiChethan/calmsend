@@ -1,0 +1,11 @@
+{
+  "name": "calmsend",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "dev": "npm --prefix frontend run dev",
+    "test:backend": "cd backend && ./.venv/bin/python -m unittest discover -s tests -v",
+    "start": "cd backend && ./.venv/bin/uvicorn app.main:app --reload"
+  }
+}

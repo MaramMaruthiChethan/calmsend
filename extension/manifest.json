@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "CalmSend Assistant",
+  "version": "1.0.0",
+  "description": "Grammarly-style emotional safety layer for chats, emails, comments, and docs.",
+  "permissions": ["activeTab", "storage", "scripting", "tabs"],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "https://web.whatsapp.com/*",
+    "https://www.instagram.com/*",
+    "https://mail.google.com/*",
+    "https://docs.google.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/*",
+        "https://www.instagram.com/*",
+        "https://mail.google.com/*",
+        "https://docs.google.com/*",
+        "<all_urls>"
+      ],
+      "js": ["content.js"],
+      "css": ["panel.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "CalmSend"
+  }
+}
