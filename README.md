@@ -63,7 +63,7 @@ sequenceDiagram
 ### 1) Clone and install dependencies
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/MaramMaruthiChethan/calmsend.git
 cd calmsend
 ```
 
@@ -88,7 +88,7 @@ npm install
 Run backend:
 
 ```bash
-cd /Users/maruthichethan/Desktop/calmsend/backend
+cd backend
 source .venv/bin/activate
 uvicorn app.main:app --reload
 ```
@@ -96,14 +96,14 @@ uvicorn app.main:app --reload
 Run frontend dev server:
 
 ```bash
-cd /Users/maruthichethan/Desktop/calmsend/frontend
+cd ../frontend
 npm run dev
 ```
 
 Or build frontend from repo root:
 
 ```bash
-cd /Users/maruthichethan/Desktop/calmsend
+cd ..
 npm run build
 ```
 
